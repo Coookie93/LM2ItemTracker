@@ -1,0 +1,197 @@
+﻿<Window x:Class="LM2ItemTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:LM2ItemTracker"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Width="{Binding Path=WindowWidth, Mode=TwoWay}" Height="{Binding Path=WindowHeight, Mode=TwoWay}" Background="{Binding Path=BackgroundColour}" Topmost="{Binding Path=AlwaysOnTop}">
+    <!--<Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>-->
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding Path=SaveCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+        <local:StringToVisibilityConverter x:Key="StringToVisibility"/>
+        <SolidColorBrush x:Key="MantraTextColour" Color="{Binding MantraTextColour}"/>
+        <SolidColorBrush x:Key="ItemFillColour" Color="{Binding ItemFillColour}"/>
+        <DataTemplate x:Key="RecentTemplate">
+            <Grid>
+                <Image Source="{Binding Path=ImagePath}" Width="40" Height="40" />
+                <TextBlock x:Name="ItemName" Text="{Binding Path=Name}" Foreground="{StaticResource MantraTextColour}" Visibility="{Binding ElementName=ItemName, Path=Text, Converter={StaticResource StringToVisibility}}" Width="auto" Height="auto" FontFamily="Arial" FontWeight="ExtraBold" FontSize="12" TextAlignment="Center" Margin="5,15"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="SilhouetteItemTemplate">
+            <Grid x:Name="Container" HorizontalAlignment="Center" VerticalAlignment="Center"
+                  Visibility="{Binding Path=IsVisible, Converter={StaticResource BoolToVisibility}}">
+                <Rectangle x:Name="SolidItemImage" Width="40" Height="40" Fill="{StaticResource ItemFillColour}">
+                    <Rectangle.OpacityMask>
+                        <ImageBrush ImageSource="{Binding Path=ImagePath}"/>
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <Image x:Name="ItemImage" Width="40" Height="40" Source="{Binding Path=ImagePath}" Visibility="{Binding Path=IsCollected, Converter={StaticResource BoolToVisibility}}"/>
+                <TextBlock x:Name="ItemCount" Text="{Binding Path=Count}" Visibility="{Binding Path=ShowCount, Converter={StaticResource BoolToVisibility}}" Margin="22,25,0,0" Width="Auto" Height="15" FontWeight="UltraBold" FontSize="10" Foreground="LimeGreen" Background="Black" TextAlignment="Center"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ItemsControl}}, Path=DataContext.UpdateItemVisibilityCommand}" CommandParameter="{Binding}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Grid>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=Count}" Value="0">
+                    <Setter TargetName="ItemCount" Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ItemsControl}}, Path=DataContext.EditMode}" Value="True">
+                    <Setter TargetName="Container" Property="Visibility" Value="Visible"/>
+                    <Setter TargetName="ItemImage" Property="Visibility" Value="Visible"/>
+                    <Setter TargetName="ItemCount" Property="Visibility" Value="Hidden"/>
+                    <Setter TargetName="SolidItemImage" Property="Visibility" Value="Hidden"/>
+                </DataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ItemsControl}}, Path=DataContext.EditMode}" Value="True"/>
+                        <Condition Binding="{Binding Path=IsVisible}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter TargetName="ItemImage" Property="Opacity" Value="0.3"/>
+                </MultiDataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="GreyScaleItemTemplate">
+            <Grid x:Name="Container" HorizontalAlignment="Center" VerticalAlignment="Center"
+                  Visibility="{Binding Path=IsVisible, Converter={StaticResource BoolToVisibility}}">
+                <Image x:Name="ItemImage" Width="40">
+                    <Image.Source>
+                        <FormatConvertedBitmap Source="{Binding Path=ImagePath}" DestinationFormat="Gray32Float"/>
+                    </Image.Source>
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="{Binding Path=ImagePath}"/>
+                    </Image.OpacityMask>
+                </Image>
+                <TextBlock x:Name="ItemCount" Text="{Binding Path=Count}" Visibility="{Binding Path=ShowCount, Converter={StaticResource BoolToVisibility}}" Margin="22,25,0,0" Width="Auto" Height="15" FontWeight="UltraBold" FontSize="10" Foreground="LimeGreen" Background="Black" TextAlignment="Center"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ItemsControl}}, Path=DataContext.UpdateItemVisibilityCommand}" CommandParameter="{Binding}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Grid>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=IsCollected}" Value="True">
+                    <Setter TargetName="ItemImage" Property="Source" Value="{Binding Path=ImagePath}"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Count}" Value="0">
+                    <Setter TargetName="ItemCount" Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ItemsControl}}, Path=DataContext.EditMode}" Value="True">
+                    <Setter TargetName="Container" Property="Visibility" Value="Visible"/>
+                    <Setter TargetName="ItemCount" Property="Visibility" Value="Hidden"/>
+                    <Setter TargetName="ItemImage" Property="Source" Value="{Binding Path=ImagePath}"/>
+                </DataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ItemsControl}}, Path=DataContext.EditMode}" Value="True"/>
+                        <Condition Binding="{Binding Path=IsVisible}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter TargetName="ItemImage" Property="Opacity" Value="0.3"/>
+                </MultiDataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="MantraTemplate">
+            <TextBlock x:Name="ItemName" Text="{Binding Path=Name}" Foreground="{StaticResource MantraTextColour}" Width="64" FontFamily="Arial" FontWeight="ExtraBold" FontSize="12" Opacity="0.25" TextAlignment="Center"/>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=IsCollected}" Value="True">
+                    <Setter TargetName="ItemName" Property="Opacity" Value="1.0"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="GuardianTemplate">
+            <Grid>
+                <Image x:Name="ItemImage" Width="35" Height="35" Source="{Binding Path=ImagePath}"/>
+                <Image Source="/Icons/Cross.png" Width="35" Visibility="{Binding Path=IsCollected, Converter={StaticResource BoolToVisibility}}"/>
+            </Grid>
+            <!--<DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=IsCollected}" Value="True">
+                    <Setter TargetName="ItemImage" Property="Source" Value="{Binding Path=ImagePath}"/>
+                    <Setter TargetName="ItemImage" Property="Opacity" Value="1.0"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>-->
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="HorizontalWrap">
+            <WrapPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+        <Style x:Key="ItemsControlStyle" TargetType="ItemsControl">
+            <Setter Property="ItemsPanel" Value="{StaticResource HorizontalWrap}"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="ItemTemplate" Value="{StaticResource GreyScaleItemTemplate}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=SilhouetteMode}" Value="True">
+                    <Setter Property="ItemTemplate" Value="{StaticResource SilhouetteItemTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Colours">
+                <MenuItem Header="Background Colour" Command="{Binding SetBackgroundColourCommand}"/>
+                <MenuItem Header="Uncollected Item Colour" Command="{Binding SetItemFillColourCommand}"/>
+                <MenuItem Header="Mantra Text Colour" Command="{Binding SetMantraTextColourCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Layout">
+                <MenuItem Header="Always On Top" IsCheckable="True" IsChecked="{Binding Path=AlwaysOnTop}"/>
+                <MenuItem Header="Show Recent Items" IsCheckable="True" IsChecked="{Binding Path=ShowRecent}"/>
+                <MenuItem Header="Silhouette Mode" IsCheckable="True" IsChecked="{Binding Path=SilhouetteMode}"/>
+                <MenuItem Header="Edit Mode" IsCheckable="True" IsChecked="{Binding Path=EditMode}"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Orientation="Horizontal"  Grid.Row="1" Visibility="{Binding Path=ShowRecent, Converter={StaticResource BoolToVisibility}}">
+            <TextBlock Text="Recently&#x0a;Collected" Foreground="{StaticResource MantraTextColour}" FontWeight="UltraBold" TextAlignment="Center" VerticalAlignment="Center" Margin="5,0"/>
+            <ItemsControl x:Name="Recent" ItemsSource="{Binding Path=Recent}" ItemTemplate="{StaticResource RecentTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <ItemsControl x:Name="Weapons" ItemsSource="{Binding Path=Weapons}" Style="{StaticResource ItemsControlStyle}"/>
+                <ItemsControl x:Name="UseItems" ItemsSource="{Binding Path=UseItems}" Style="{StaticResource ItemsControlStyle}"/>
+                <ItemsControl x:Name="EquippableItems" ItemsSource="{Binding Path=Equippable}" Style="{StaticResource ItemsControlStyle}"/>
+                <ItemsControl x:Name="OtherItems" ItemsSource="{Binding Path=OtherItems}" Style="{StaticResource ItemsControlStyle}"/>
+                <ItemsControl x:Name="Software" ItemsSource="{Binding Path=Software}" Style="{StaticResource ItemsControlStyle}"/>
+                <ItemsControl x:Name="Mantras" ItemsSource="{Binding Path=Mantras}"  ItemTemplate="{StaticResource MantraTemplate}" ItemsPanel="{StaticResource HorizontalWrap}" Margin="0,5"/>
+                <ItemsControl x:Name="Guardians" ItemsSource="{Binding Path=Guardians}"  ItemTemplate="{StaticResource GuardianTemplate}" ItemsPanel="{StaticResource HorizontalWrap}" Margin="0,5"/>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal"  Grid.Row="3" Background="White">
+            <Button Content="Connect" Command="{Binding ConnectCommand}" Width="100" Height="25"/>
+            <TextBlock Text="Status:" VerticalAlignment="Center" Margin="5,0"/>
+            <TextBlock VerticalAlignment="Center">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Text" Value="Disconnected"/>
+                        <Setter Property="Foreground" Value="Red"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsConnected}" Value="True">
+                                <Setter Property="Text" Value="Connected"/>
+                                <Setter Property="Foreground" Value="Green"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

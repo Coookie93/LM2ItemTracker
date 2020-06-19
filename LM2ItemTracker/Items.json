@@ -1,0 +1,447 @@
+﻿{
+  "62": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Whip1.png",
+    "ImagePaths": [
+      "/Icons/Weapons/Whip1.png",
+      "/Icons/Weapons/Whip2.png",
+      "/Icons/Weapons/Whip3.png"
+    ]
+  },
+  "63": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Knife.png"
+  },
+  "64": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Rapier.png"
+  },
+  "65": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Axe.png"
+  },
+  "66": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Katana.png"
+  },
+  "67": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Shuriken.png"
+  },
+  "68": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/RollingShuriken.png"
+  },
+  "69": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/EarthSpear.png"
+  },
+  "70": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/FlareGun.png"
+  },
+  "73": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Caltrops.png"
+  },
+  "72": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Chakram.png"
+  },
+  "71": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Bomb.png"
+  },
+  "74": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Pistol.png"
+  },
+  "75": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/Shield1.png",
+    "ImagePaths": [
+      "/Icons/Weapons/Shield1.png",
+      "/Icons/Weapons/Shield2.png",
+      "/Icons/Weapons/Shield3.png"
+    ]
+  },
+  "76": {
+    "ItemType": "Weapon",
+    "ImagePath": "/Icons/Weapons/AnkhJewel.png",
+    "ShowCount" : "True"
+  },
+  "0": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Scanner.png"
+  },
+  "1": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/DjedPillar.png"
+  },
+  "2": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Mjolnir.png"
+  },
+  "3": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Beherit1.png",
+    "ImagePaths": [
+      "/Icons/UseItems/Beherit1.png",
+      "/Icons/UseItems/Beherit2.png",
+      "/Icons/UseItems/Beherit3.png"
+    ]
+  },
+  "4": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Battery.png"
+  },
+  "5": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/LampofTime1.png",
+    "ImagePaths": [
+      "/Icons/UseItems/LampofTime1.png",
+      "/Icons/UseItems/LampofTime2.png"
+    ]
+  },
+  "6": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Pochette.png"
+  },
+  "7": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/PyramidCrystal.png"
+  },
+  "8": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/CrystalSkull.png",
+    "ShowCount": "True"
+  },
+  "9": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Vessel1.png",
+    "ImagePaths": [
+      "/Icons/UseItems/Vessel1.png",
+      "/Icons/UseItems/Vessel2.png"
+    ]
+  },
+  "10": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/Pepper.png"
+  },
+  "11": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/EggofCreation.png"
+  },
+  "12": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/GiantsFlute.png"
+  },
+  "13": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/CogofAntiquity.png"
+  },
+  "14": {
+    "ItemType": "Use",
+    "ImagePath": "/Icons/UseItems/MulanaTalisman.png"
+  },
+  "19": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Gloves.png"
+  },
+  "33": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/GrappleClaw.png"
+  },
+  "39": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Ring.png"
+  },
+  "45": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/SnowShoes.png"
+  },
+  "22": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/FlameTorc.png"
+  },
+  "21": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/GaleFibula.png"
+  },
+  "23": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Vajra.png"
+  },
+  "41": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Feather.png"
+  },
+  "27": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/IceCloak.png"
+  },
+  "35": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Scalesphere.png"
+  },
+  "42": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Scriptures.png"
+  },
+  "34": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Spaulder.png"
+  },
+  "28": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/NemeanFur.png"
+  },
+  "24": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/PowerBand.png"
+  },
+  "29": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Gauntlet.png"
+  },
+  "30": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Anchor.png"
+  },
+  "40": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/Bracelet.png"
+  },
+  "47": {
+    "ItemType": "Equip",
+    "ImagePath": "/Icons/EquipItems/BookoftheDead.png"
+  },
+  "16": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/ShellHorn.png"
+  },
+  "17": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/HolyGrail.png"
+  },
+  "18": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/FairyPass.png"
+  },
+  "31": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/FreyasPendant.png"
+  },
+  "32": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/TotemPole.png"
+  },
+  "25": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/BronzeMirror.png"
+  },
+  "36": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Crucifix.png"
+  },
+  "26": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Perfume.png"
+  },
+  "38": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/MaatsFeather.png"
+  },
+  "20": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/DinosaurFigure.png"
+  },
+  "43": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/FreysShip.png"
+  },
+  "44": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Codices.png"
+  },
+  "37": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/GaneshasTalisman.png"
+  },
+  "46": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Harp.png"
+  },
+  "49": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/DestinyTablet.png"
+  },
+  "48": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/LightScythe.png"
+  },
+  "50": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SecretTreasure.png"
+  },
+  "15": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/MSX3.png"
+  },
+  "51": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/OriginSigil.png"
+  },
+  "52": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/BirthSigil.png"
+  },
+  "53": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/LifeSigil.png"
+  },
+  "54": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/DeathSigil.png"
+  },
+  "56": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/ClaydollSuit.png"
+  },
+  "77": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/Xelputter.png"
+  },
+  "78": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/YagooReader.png"
+  },
+  "79": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/YagooStreet.png"
+  },
+  "80": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/TextTrax2.png"
+  },
+  "81": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/RuinsEncyclopedia.png"
+  },
+  "82": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/Mantra.png"
+  },
+  "83": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/Guild.png"
+  },
+  "84": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/KosugiResearch.png"
+  },
+  "85": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/EngaMusica.png"
+  },
+  "86": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/BeoEgLana.png"
+  },
+  "87": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/Alert.png"
+  },
+  "88": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/Snapshots.png"
+  },
+  "89": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/Skull.png"
+  },
+  "90": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/RaceScanner.png"
+  },
+  "91": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/DeathVillage.png"
+  },
+  "92": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/RoseCamelia.png"
+  },
+  "93": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/SpaceCapstarII.png"
+  },
+  "94": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/LonelyHouseMoving.png"
+  },
+  "95": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/MekuriMaster.png"
+  },
+  "96": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/BounceShot.png"
+  },
+  "97": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/MiracleWitch.png"
+  },
+  "98": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/FutureDevCompany.png"
+  },
+  "99": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/LaMulana.png"
+  },
+  "100": {
+    "ItemType": "Software",
+    "ImagePath": "/Icons/Software/LaMulana2.png"
+  },
+  "152": {
+    "ItemType": "Mantra",
+    "Name": "HEAVEN"
+  },
+  "153": {
+    "ItemType": "Mantra",
+    "Name": "EARTH"
+  },
+  "154": {
+    "ItemType": "Mantra",
+    "Name": "SUN"
+  },
+  "155": {
+    "ItemType": "Mantra",
+    "Name": "MOON"
+  },
+  "156": {
+    "ItemType": "Mantra",
+    "Name": "SEA"
+  },
+  "157": {
+    "ItemType": "Mantra",
+    "Name": "FIRE"
+  },
+  "158": {
+    "ItemType": "Mantra",
+    "Name": "WIND"
+  },
+  "159": {
+    "ItemType": "Mantra",
+    "Name": "MOTHER"
+  },
+  "160": {
+    "ItemType": "Mantra",
+    "Name": "CHILD"
+  },
+  "161": {
+    "ItemType": "Mantra",
+    "Name": "NIGHT"
+  }
+}

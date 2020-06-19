@@ -1,0 +1,155 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LM2ItemTracker.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AlwaysOnTop" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BackgroundColour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FFFFFFFF</Value>
+    </Setting>
+    <Setting Name="MantraTextColour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF000000</Value>
+    </Setting>
+    <Setting Name="ItemFillColour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF000000</Value>
+    </Setting>
+    <Setting Name="WeaponsLayout" Type="System.Boolean[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfBoolean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+&lt;/ArrayOfBoolean&gt;</Value>
+    </Setting>
+    <Setting Name="UseItemLayout" Type="System.Boolean[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfBoolean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+&lt;/ArrayOfBoolean&gt;</Value>
+    </Setting>
+    <Setting Name="EquipItemLayout" Type="System.Boolean[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfBoolean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+&lt;/ArrayOfBoolean&gt;</Value>
+    </Setting>
+    <Setting Name="OtherItemLayout" Type="System.Boolean[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfBoolean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+&lt;/ArrayOfBoolean&gt;</Value>
+    </Setting>
+    <Setting Name="SoftwareLayout" Type="System.Boolean[]" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfBoolean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+  &lt;boolean&gt;true&lt;/boolean&gt;
+&lt;/ArrayOfBoolean&gt;</Value>
+    </Setting>
+    <Setting Name="WindowWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">340</Value>
+    </Setting>
+    <Setting Name="WindowHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">800</Value>
+    </Setting>
+    <Setting Name="SilhouetteMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowRecent" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

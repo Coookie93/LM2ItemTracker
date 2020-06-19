@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{858F7A6C-EB45-4D73-8690-18AD47836899}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LM2ItemTracker</RootNamespace>
+    <AssemblyName>LM2ItemTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="TrackerItem.cs" />
+    <Compile Include="TrackerItemConverter.cs" />
+    <Compile Include="UpgradableTrackerItem.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BindableBase.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guardians.json" />
+    <EmbeddedResource Include="Items.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\OtherItems\BirthSigil.png" />
+    <Resource Include="Icons\OtherItems\DeathSigil.png" />
+    <Resource Include="Icons\OtherItems\LifeSigil.png" />
+    <Resource Include="Icons\OtherItems\OriginSigil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\OtherItems\HolyGrail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Guardians\Anu.png" />
+    <Resource Include="Icons\Guardians\Aten-Ra.png" />
+    <Resource Include="Icons\Guardians\Echidna.png" />
+    <Resource Include="Icons\Guardians\Fafnir.png" />
+    <Resource Include="Icons\Guardians\Hel.png" />
+    <Resource Include="Icons\Guardians\Jormangund.png" />
+    <Resource Include="Icons\Guardians\Kujata.png" />
+    <Resource Include="Icons\Guardians\Surtr.png" />
+    <Resource Include="Icons\Guardians\Vritra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Weapons\AnkhJewel.png" />
+    <Resource Include="Icons\Weapons\Axe.png" />
+    <Resource Include="Icons\Weapons\Bomb.png" />
+    <Resource Include="Icons\Weapons\Caltrops.png" />
+    <Resource Include="Icons\Weapons\Chakram.png" />
+    <Resource Include="Icons\Weapons\EarthSpear.png" />
+    <Resource Include="Icons\Weapons\FlareGun.png" />
+    <Resource Include="Icons\Weapons\Katana.png" />
+    <Resource Include="Icons\Weapons\Knife.png" />
+    <Resource Include="Icons\Weapons\Pistol.png" />
+    <Resource Include="Icons\Weapons\Rapier.png" />
+    <Resource Include="Icons\Weapons\RollingShuriken.png" />
+    <Resource Include="Icons\Weapons\Shield1.png" />
+    <Resource Include="Icons\Weapons\Shield2.png" />
+    <Resource Include="Icons\Weapons\Shield3.png" />
+    <Resource Include="Icons\Weapons\Shuriken.png" />
+    <Resource Include="Icons\Weapons\Whip1.png" />
+    <Resource Include="Icons\Weapons\Whip2.png" />
+    <Resource Include="Icons\Weapons\Whip3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\UseItems\Battery.png" />
+    <Resource Include="Icons\UseItems\Beherit1.png" />
+    <Resource Include="Icons\UseItems\CogofAntiquity.png" />
+    <Resource Include="Icons\UseItems\CrystalSkull.png" />
+    <Resource Include="Icons\UseItems\DjedPillar.png" />
+    <Resource Include="Icons\UseItems\EggofCreation.png" />
+    <Resource Include="Icons\UseItems\GiantsFlute.png" />
+    <Resource Include="Icons\UseItems\LampofTime1.png" />
+    <Resource Include="Icons\UseItems\Mjolnir.png" />
+    <Resource Include="Icons\UseItems\MulanaTalisman.png" />
+    <Resource Include="Icons\UseItems\Pepper.png" />
+    <Resource Include="Icons\UseItems\Pochette.png" />
+    <Resource Include="Icons\UseItems\PyramidCrystal.png" />
+    <Resource Include="Icons\UseItems\Scanner.png" />
+    <Resource Include="Icons\UseItems\Vessel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\EquipItems\Anchor.png" />
+    <Resource Include="Icons\EquipItems\BookoftheDead.png" />
+    <Resource Include="Icons\EquipItems\Bracelet.png" />
+    <Resource Include="Icons\EquipItems\Feather.png" />
+    <Resource Include="Icons\EquipItems\FlameTorc.png" />
+    <Resource Include="Icons\EquipItems\GaleFibula.png" />
+    <Resource Include="Icons\EquipItems\Gloves.png" />
+    <Resource Include="Icons\EquipItems\GrappleClaw.png" />
+    <Resource Include="Icons\EquipItems\IceCloak.png" />
+    <Resource Include="Icons\EquipItems\PowerBand.png" />
+    <Resource Include="Icons\EquipItems\Scalesphere.png" />
+    <Resource Include="Icons\EquipItems\Scriptures.png" />
+    <Resource Include="Icons\EquipItems\SnowShoes.png" />
+    <Resource Include="Icons\EquipItems\Spaulder.png" />
+    <Resource Include="Icons\EquipItems\Vajra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\EquipItems\Ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\EquipItems\Gauntlet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\EquipItems\NemeanFur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\OtherItems\ClaydollSuit.png" />
+    <Resource Include="Icons\OtherItems\Codices.png" />
+    <Resource Include="Icons\OtherItems\Crucifix.png" />
+    <Resource Include="Icons\OtherItems\DestinyTablet.png" />
+    <Resource Include="Icons\OtherItems\DinosaurFigure.png" />
+    <Resource Include="Icons\OtherItems\FairyPass.png" />
+    <Resource Include="Icons\OtherItems\FreysShip.png" />
+    <Resource Include="Icons\OtherItems\FreyasPendant.png" />
+    <Resource Include="Icons\OtherItems\GaneshasTalisman.png" />
+    <Resource Include="Icons\OtherItems\Harp.png" />
+    <Resource Include="Icons\OtherItems\LightScythe.png" />
+    <Resource Include="Icons\OtherItems\MaatsFeather.png" />
+    <Resource Include="Icons\OtherItems\BronzeMirror.png" />
+    <Resource Include="Icons\OtherItems\MSX3.png" />
+    <Resource Include="Icons\OtherItems\Perfume.png" />
+    <Resource Include="Icons\OtherItems\ShellHorn.png" />
+    <Resource Include="Icons\OtherItems\TotemPole.png" />
+    <Resource Include="Icons\OtherItems\SecretTreasure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\UseItems\Beherit2.png" />
+    <Resource Include="Icons\UseItems\Beherit3.png" />
+    <Resource Include="Icons\UseItems\LampofTime2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Software\Alert.png" />
+    <Resource Include="Icons\Software\BeoEgLana.png" />
+    <Resource Include="Icons\Software\BounceShot.png" />
+    <Resource Include="Icons\Software\DeathVillage.png" />
+    <Resource Include="Icons\Software\EngaMusica.png" />
+    <Resource Include="Icons\Software\FutureDevCompany.png" />
+    <Resource Include="Icons\Software\Guild.png" />
+    <Resource Include="Icons\Software\KosugiResearch.png" />
+    <Resource Include="Icons\Software\LaMulana.png" />
+    <Resource Include="Icons\Software\LaMulana2.png" />
+    <Resource Include="Icons\Software\LonelyHouseMoving.png" />
+    <Resource Include="Icons\Software\Mantra.png" />
+    <Resource Include="Icons\Software\MekuriMaster.png" />
+    <Resource Include="Icons\Software\MiracleWitch.png" />
+    <Resource Include="Icons\Software\RaceScanner.png" />
+    <Resource Include="Icons\Software\RoseCamelia.png" />
+    <Resource Include="Icons\Software\RuinsEncyclopedia.png" />
+    <Resource Include="Icons\Software\Skull.png" />
+    <Resource Include="Icons\Software\SnapShots.png" />
+    <Resource Include="Icons\Software\SpaceCapstarII.png" />
+    <Resource Include="Icons\Software\TextTrax2.png" />
+    <Resource Include="Icons\Software\Xelputter.png" />
+    <Resource Include="Icons\Software\YagooReader.png" />
+    <Resource Include="Icons\Software\YagooStreet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\UseItems\Vessel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Cross.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

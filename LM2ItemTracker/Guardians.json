@@ -1,0 +1,29 @@
+﻿{
+  "10": {
+    "ImagePath": "/Icons/Guardians/Fafnir.png"
+  },
+  "11": {
+    "ImagePath": "/Icons/Guardians/Vritra.png"
+  },
+  "12": {
+    "ImagePath": "/Icons/Guardians/Kujata.png"
+  },
+  "14": {
+    "ImagePath": "/Icons/Guardians/Jormangund.png"
+  },
+  "13": {
+    "ImagePath": "/Icons/Guardians/Aten-Ra.png"
+  },
+  "15": {
+    "ImagePath": "/Icons/Guardians/Anu.png"
+  },
+  "16": {
+    "ImagePath": "/Icons/Guardians/Surtr.png"
+  },
+  "17": {
+    "ImagePath": "/Icons/Guardians/Echidna.png"
+  },
+  "18": {
+    "ImagePath": "/Icons/Guardians/Hel.png"
+  }
+}
