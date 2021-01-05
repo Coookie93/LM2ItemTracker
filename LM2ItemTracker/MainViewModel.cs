@@ -427,13 +427,6 @@ namespace LM2ItemTracker
                                         item.Upgrade(data - 1);
                                         break;
                                     }
-                                    case 62:
-                                    case 75:
-                                    {
-                                        item.Upgrade(data - 1);
-                                        item.Count = data;
-                                        break;
-                                    }
                                     case 8:
                                     case 76:
                                     {
@@ -443,6 +436,13 @@ namespace LM2ItemTracker
                                     case 9:
                                     {
                                         item.Upgrade(data > 1 ? 1 : 0);
+                                        break;
+                                    }
+                                    case 62:
+                                    case 75:
+                                    {
+                                        item.Upgrade(data - 1);
+                                        item.Count = data;
                                         break;
                                     }
                                 }
@@ -455,11 +455,11 @@ namespace LM2ItemTracker
                                         {
                                             UpdateRecent(item.Name, item.ImagePath);
                                         }
-                                        else if (flag == 76 && prevCount < item.Count)
+                                        else if (flag == 8)
                                         {
                                             UpdateRecent(item.Name, item.ImagePath);
                                         }
-                                        else if (flag == 8)
+                                        else if (flag == 84)
                                         {
                                             UpdateRecent(item.Name, item.ImagePath);
                                         }
@@ -476,9 +476,7 @@ namespace LM2ItemTracker
                         else if (sheet == 3)
                         {
                             if (guardiansDict.TryGetValue(flag, out TrackerItem item))
-                            {
                                 item.IsCollected = true;
-                            }
                         }
                         else if (sheet == 100)
                         {

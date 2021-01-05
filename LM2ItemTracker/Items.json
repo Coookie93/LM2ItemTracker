@@ -68,7 +68,7 @@
   "76": {
     "ItemType": "Weapon",
     "ImagePath": "/Icons/Weapons/AnkhJewel.png",
-    "ShowCount" : "True"
+    "ShowCount": "True"
   },
   "0": {
     "ItemType": "Use",
@@ -307,6 +307,106 @@
   "56": {
     "ItemType": "Other",
     "ImagePath": "/Icons/OtherItems/ClaydollSuit.png"
+  },
+  "101": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "102": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "103": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "104": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "105": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "106": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "107": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "108": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "109": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "110": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/SacredOrb.png"
+  },
+  "111": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "112": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "113": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "114": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "115": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "116": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "117": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "118": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "119": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "120": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "121": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "123": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "124": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "125": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
+  },
+  "126": {
+    "ItemType": "Other",
+    "ImagePath": "/Icons/OtherItems/Map.png"
   },
   "77": {
     "ItemType": "Software",
