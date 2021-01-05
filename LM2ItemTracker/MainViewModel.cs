@@ -258,7 +258,7 @@ namespace LM2ItemTracker
             foreach (var pair in Equippable.Zip(Properties.Settings.Default.EquipItemLayout, Tuple.Create))
                 pair.Item1.IsVisible = pair.Item2;
 
-            OtherItems = new ObservableCollection<TrackerItem>(items.Where(kvp => kvp.Value.ItemType == ItemType.Other).Select(kvp => kvp.Value));
+            OtherItems = new ObservableCollection<TrackerItem>(items.Where(kvp => kvp.Key < 101 && kvp.Value.ItemType == ItemType.Other).Select(kvp => kvp.Value));
             foreach (var pair in OtherItems.Zip(Properties.Settings.Default.OtherItemLayout, Tuple.Create))
                 pair.Item1.IsVisible = pair.Item2;
 
