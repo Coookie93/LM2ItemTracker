@@ -113,12 +113,6 @@
                 <Image x:Name="ItemImage" Width="35" Height="35" Source="{Binding Path=ImagePath}"/>
                 <Image Source="/Icons/Cross.png" Width="35" Visibility="{Binding Path=IsCollected, Converter={StaticResource BoolToVisibility}}"/>
             </Grid>
-            <!--<DataTemplate.Triggers>
-                <DataTrigger Binding="{Binding Path=IsCollected}" Value="True">
-                    <Setter TargetName="ItemImage" Property="Source" Value="{Binding Path=ImagePath}"/>
-                    <Setter TargetName="ItemImage" Property="Opacity" Value="1.0"/>
-                </DataTrigger>
-            </DataTemplate.Triggers>-->
         </DataTemplate>
         <ItemsPanelTemplate x:Key="HorizontalWrap">
             <WrapPanel Orientation="Horizontal"/>
@@ -164,7 +158,7 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </StackPanel>
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Disabled">
             <StackPanel>
                 <ItemsControl x:Name="Weapons" ItemsSource="{Binding Path=Weapons}" Style="{StaticResource ItemsControlStyle}"/>
                 <ItemsControl x:Name="UseItems" ItemsSource="{Binding Path=UseItems}" Style="{StaticResource ItemsControlStyle}"/>

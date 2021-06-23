@@ -89,7 +89,8 @@
       "/Icons/UseItems/Beherit1.png",
       "/Icons/UseItems/Beherit2.png",
       "/Icons/UseItems/Beherit3.png"
-    ]
+    ],
+    "ShowCount": "True"
   },
   "4": {
     "ItemType": "Use",
@@ -347,66 +348,6 @@
   "110": {
     "ItemType": "Other",
     "ImagePath": "/Icons/OtherItems/SacredOrb.png"
-  },
-  "111": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "112": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "113": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "114": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "115": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "116": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "117": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "118": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "119": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "120": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "121": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "123": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "124": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "125": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
-  },
-  "126": {
-    "ItemType": "Other",
-    "ImagePath": "/Icons/OtherItems/Map.png"
   },
   "77": {
     "ItemType": "Software",

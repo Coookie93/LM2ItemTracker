@@ -420,6 +420,10 @@ namespace LM2ItemTracker
                                             item.Upgrade(1);
                                         else if (data == 7)
                                             item.Upgrade(2);
+
+                                        if (data > 1)
+                                            item.Count = data - 1;
+
                                         break;
                                     }
                                     case 5:
@@ -455,6 +459,10 @@ namespace LM2ItemTracker
                                         {
                                             UpdateRecent(item.Name, item.ImagePath);
                                         }
+                                        else if (flag == 3)
+                                        {
+                                            UpdateRecent(item.Name, item.ImagePath);
+                                        }
                                         else if (flag == 8)
                                         {
                                             UpdateRecent(item.Name, item.ImagePath);
@@ -472,6 +480,15 @@ namespace LM2ItemTracker
 
                                 item.IsCollected = data > 0;
                             }
+                            else if(!IsResetting && (flag >= 101 && flag <= 110))
+                            {
+                                UpdateRecent("Sacred Orb", "/Icons/OtherItems/SacredOrb.png");
+                            }
+                            else if(!IsResetting && (flag >= 111 && flag <= 126))
+                            {
+                                UpdateRecent("Map", "/Icons/OtherItems/Map.png");
+                            }
+
                         }
                         else if (sheet == 3)
                         {
